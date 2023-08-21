@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+<canvas id="myChart"></canvas>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      datasets: [{
+        data: [86, 71, 13, 45, 56, 21, 64, 57, 23, 24, 11, 46],
+        label: 'Food',
+        borderColor: 'rgba(120, 120, 255,1)'
+      },
+        {
+          data:[100, 21, 113, 0, 53, 64, 24, 74, 79, 24, 66, 23],
+          label:'Clothes',
+          borderColor: 'rgba(225, 100, 255, 1)'
+        },
+        {
+          data:[0, 21, 35, 12, 57, 74, 23, 2, 86, 53, 22, 13],
+          label:'Candy',
+          borderColor: 'rgba(100, 200, 100, 1)'
+        }]
+    },
+    options:{
+      plugins:{
+        title: {
+          display: true,
+          text: 'Monthly Spending'
+        }
+      }
+    }
+  });
+
+
+</script>
+<canvas id="chart2"></canvas>
+<script>
+  var cty = document.getElementById('chart2');
+  var nextChart = new Chart(cty, {
+    type: 'scatter',
+    data: {
+        datasets: [{
+          label: 'Dastaset1',
+          backgroundColor: 'rgba(255, 200, 50, 1)',
+          pointBackgroundColor: 'rgba(255, 200, 50, 1)',
+          pointRadius: 4,
+          data:[
+            {x: 7, y: 10},
+            {x: 11, y: 25},
+            {x: 15, y: 15},
+            {x: 45, y: 64},
+            {x: 75, y: 23},
+            {x: 23, y: 76},
+            {x: 64, y: 24},
+            {x: 84, y: 28}
+          ]
+        }, {
+          label: 'Dastaset2',
+          backgroundColor: 'rgba(0,255,33, 1',
+          pointBackgroundColor: 'rgba(0,255,33)',
+          pointRadius: 4,
+          data: [
+            {x: 2, y: 45},
+            {x: 12, y: 76},
+            {x: 57, y: 67},
+            {x: 34, y: 46},
+            {x: 12, y: 32},
+            {x: 23, y: 56},
+            {x: 54, y: 75},
+            {x: 23, y: 23}
+
+          ]
+        }, {
+          label: 'Dastaset3',
+          backgroundColor: 'rgb(253,0,0)',
+          pointBackgroundColor: 'rgb(255,0,0)',
+          pointRadius: 4,
+          data:[
+            {x: 34, y: 14},
+            {x: 67, y: 13},
+            {x: 65, y: 74},
+            {x: 32, y: 14},
+            {x: 64, y: 41},
+            {x: 23, y: 21},
+            {x: 34, y: 67},
+            {x: 66, y: 63},
+            {x: 25, y: 45},
+            {x: 55, y: 23}
+
+
+          ]
+        }, {
+          label: 'Dastaset4',
+          backgroundColor: 'rgb(152,0,253)',
+          pointBackgroundColor: 'rgb(151,0,251)',
+          pointRadius: 4,
+          data:[
+            {x: 53, y: 45},
+            {x: 34, y: 23},
+            {x: 65, y: 54},
+            {x: 53, y: 23},
+            {x: 23, y: 23},
+            {x: 23, y: 64},
+            {x: 75, y: 13},
+            {x: 64, y: 54},
+            {x: 23, y: 23},
+            {x: 53, y: 74}
+
+
+          ]
+        }
+        ]
+    },
+    options: {
+      scales: {
+        xAxis: {
+          beginAtZero: true
+        },
+        yAxis: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: 'sales',
+        }
+      }
+    }
+  });
+
+</script>
+</body>
+</html>
