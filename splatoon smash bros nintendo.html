@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<center>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+          integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+  <div style="width: 200px">
+    <canvas id="MyChart"></canvas>
+  </div>
+  <script>
+    var ctx = document.getElementById('MyChart');
+    var MyChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Others', 'Splash-o-Matic', 'Splattershot', 'Slother Machine', 'Splattershot Jr'],
+        datasets: [{
+          label: 'My First Doughnut Today',
+          data:[144, 83, 28, 23, 22],
+          backgroundColor:[
+            'rgb(121,121,121)',
+            'rgb(50, 150, 240)',
+            'rgb(255, 200, 80)',
+            'rgb(255,155,93)',
+            'rgb(255,119,236)',
+            'rgb(181,102,255)'
+          ],
+          hoverOffset: 1
+        }]
+      }
+    });
+  </script>
+  <div style="width: 200px">
+    <canvas id="MyChart2"></canvas>
+  </div>
+  <script>
+    var cty = document.getElementById('MyChart2');
+    var MyChart2 = new Chart(cty, {
+      type: 'pie',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Orange', 'Pink', 'Purple'],
+        datasets: [{
+          label: 'My First Doughnut Today',
+          data:[300, 50, 200, 150, 57, 38],
+          backgroundColor:[
+            'rgb(255, 99, 150)',
+            'rgb(50, 150, 240)',
+            'rgb(255, 200, 80)',
+            'rgb(255,155,93)',
+            'rgb(255,119,236)',
+            'rgb(181,102,255)'
+          ],
+          hoverOffset: 1
+        }]
+      }
+    });
+  </script>
+
+  <div style="width: 400px">
+    <canvas id="MyChart3"></canvas>
+  </div>
+  <script>
+    var ctz = document.getElementById('MyChart3');
+    var MyChart3 = new Chart(ctz, {
+      type: 'pie',
+      data: {
+        labels: ['Red', 'Green', 'Yellow', 'Grey', 'Blue', 'Orange', 'Pink', 'Purple'],
+        datasets: [{
+          label: 'Polar Area Chart',
+          data:[11, 10, 15, 3, 2, 6, 3, 7],
+          backgroundColor:[
+            'rgb(255, 100, 130)',
+            'rgb(80, 190, 190)',
+            'rgb(255, 200, 85)',
+            'rgb(201, 203, 203)',
+            'rgb(50, 160, 240)',
+            'rgb(255,155,93)',
+            'rgb(255,119,236)',
+            'rgb(181,102,255)'
+          ],
+          hoverOffset: 1
+        }]
+      }
+    });
+  </script>
+</center>
+</body>
+</html>
